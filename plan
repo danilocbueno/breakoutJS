@@ -3,3 +3,6 @@
 
 1. Criando a estrutura do jogo
 Estruturação do projeto através da criação das pastas para armazenamento e organização dos arquivos; Criar as pastas css, js, img.
+
+1.1 Criando os arquivos da estrutura
+Criação dos arquivos logica.js, estilo.css e game.html
