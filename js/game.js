@@ -53,7 +53,7 @@ function desenhaBase() {
 function desenharBola() {
 	ctx.beginPath();
 	ctx.arc(xBola, yBola, raioBola, 0, Math.PI*2);
-	ctx.fillStyle = "#0095DD";
+	ctx.fillStyle = "red";
 	ctx.fill();
 	ctx.closePath();
 }
@@ -73,9 +73,9 @@ function desenhar() {
 	}
 
 	//tratar barra
-	if(teclaDireitaPressionada) {
+	if(teclaDireitaPressionada && baseX < canvas.width - baseLargura) {
 		baseX = baseX + 7;
-	}else if(teclaEsquerdaPressionada) {
+	}else if(teclaEsquerdaPressionada && baseX > 0) {
 		baseX = baseX - 7;
 	}
 
