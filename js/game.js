@@ -64,8 +64,16 @@ function desenhar() {
 	desenharBola();
 
 	//tratar bola
-	if(yBola < raioBola || yBola > canvas.height - raioBola) {
+	if(yBola < raioBola) {
 		dyBola = -dyBola;
+	} else if(yBola > canvas.height - raioBola) {
+
+		if(xBola > baseX && xBola < baseX + baseLargura) {
+			dyBola = -dyBola;
+		}else {
+			alert("Errou!");
+			document.location.reload();
+		}
 	}
 
 	if(xBola < raioBola || xBola > canvas.width - raioBola) {
